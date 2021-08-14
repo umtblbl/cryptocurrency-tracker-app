@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Progress -->
+    <dimen name="app_progress_size">180dp</dimen>
+
+</resources>
