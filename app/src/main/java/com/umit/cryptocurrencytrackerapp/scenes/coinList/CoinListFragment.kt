@@ -11,5 +11,6 @@ class CoinListFragment : BaseFragment<CoinListViewModel, FragmentCoinListBinding
     }
 
     override fun setupView() {
+        viewModel.getCoin()
     }
 }

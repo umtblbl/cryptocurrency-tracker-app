@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25181159420289856" />
         <entry key="app/src/main/res/layout/fragment_coin_list.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/layout_app_progress.xml" value="0.23505434782608695" />
       </map>
