@@ -55,13 +55,19 @@ dependencies {
     implementation(Libs.rxRelay)
     implementation(Libs.lottie)
     implementation(Libs.glide)
-    implementation(Libs.dagger)
     implementation(Libs.daggerAndroid)
     implementation(Libs.daggerAndroidSupport)
+    implementation(Libs.dagger)
+    implementation(Libs.room)
+    implementation(Libs.roomRuntime)
+
     kapt(Libs.daggerCompiler)
     kapt(Libs.daggerAndroidProcessor)
+    kapt(Libs.roomKapt)
+
+    testImplementation(Tests.jUnit)
+    testImplementation(Tests.roomTest)
 
     androidTestImplementation(Tests.androidJunit)
     androidTestImplementation(Tests.espresso)
-    testImplementation(Tests.jUnit)
 }

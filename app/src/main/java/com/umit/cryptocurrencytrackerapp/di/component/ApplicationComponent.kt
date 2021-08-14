@@ -5,6 +5,7 @@ import com.umit.cryptocurrencytrackerapp.CryptocurrencyTrackerApp
 import com.umit.cryptocurrencytrackerapp.di.module.ActivityModule
 import com.umit.cryptocurrencytrackerapp.di.module.AppModule
 import com.umit.cryptocurrencytrackerapp.di.module.DataSourceModule
+import com.umit.cryptocurrencytrackerapp.di.module.DatabaseModule
 import com.umit.cryptocurrencytrackerapp.di.module.FragmentBuildersModule
 import com.umit.cryptocurrencytrackerapp.di.module.NetworkModule
 import com.umit.cryptocurrencytrackerapp.di.module.RepositoryModule
@@ -24,6 +25,7 @@ import javax.inject.Singleton
         FragmentBuildersModule::class,
         ViewModelModule::class,
         NetworkModule::class,
+        DatabaseModule::class,
         DataSourceModule::class,
         RepositoryModule::class,
         UseCaseModule::class

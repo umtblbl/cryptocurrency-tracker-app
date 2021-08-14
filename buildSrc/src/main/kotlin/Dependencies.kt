@@ -55,6 +55,9 @@ object Versions {
 
     // Dagger
     const val dagger = "2.38.1"
+
+    // Room
+    const val room = "2.3.0"
 }
 
 object Libs {
@@ -103,12 +106,18 @@ object Libs {
     const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
     const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     const val daggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+
+    // Room
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    const val room = "androidx.room:room-ktx:${Versions.room}"
+    const val roomKapt = "androidx.room:room-compiler:${Versions.room}"
 }
 
 object Tests {
     const val jUnit = "junit:junit:${Versions.junit}"
     const val androidJunit = "androidx.test.ext:junit:${Versions.androidJunit}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+    const val roomTest = "androidx.room:room-testing:${Versions.room}"
 }
 
 object Paths {
