@@ -21,7 +21,7 @@ class CoinDetailViewModel @Inject constructor(
 
     // RefreshLayout
     val stopRefreshLayout: PublishSubject<Unit> = PublishSubject.create()
-    // Data Call Subject
+    // Data Fetch Subject
     val fetchCoinDetailRelay: BehaviorRelay<String> = BehaviorRelay.create()
     // Data
     val coinDetailSubject: PublishSubject<CoinDetailItemModel> = PublishSubject.create()

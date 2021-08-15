@@ -8,6 +8,8 @@ import com.umit.cryptocurrencytrackerapp.scenes.coinDetail.CoinDetailViewModel
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.CoinListViewModel
 import com.umit.cryptocurrencytrackerapp.scenes.favoriteCoinList.FavoriteCoinListViewModel
 import com.umit.cryptocurrencytrackerapp.scenes.home.HomeViewModel
+import com.umit.cryptocurrencytrackerapp.scenes.login.LoginViewModel
+import com.umit.cryptocurrencytrackerapp.scenes.register.RegisterViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -37,4 +39,14 @@ abstract class ViewModelModule {
     @Binds
     @ViewModelKey(CoinDetailViewModel::class)
     abstract fun provideCoinDetailViewModel(coinDetailViewModel: CoinDetailViewModel): ViewModel
+
+    @IntoMap
+    @Binds
+    @ViewModelKey(LoginViewModel::class)
+    abstract fun provideLoginViewModel(loginViewModel: LoginViewModel): ViewModel
+
+    @IntoMap
+    @Binds
+    @ViewModelKey(RegisterViewModel::class)
+    abstract fun provideRegisterViewModel(registerViewModel: RegisterViewModel): ViewModel
 }

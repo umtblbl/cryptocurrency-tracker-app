@@ -3,6 +3,7 @@ plugins {
     kotlin(Plugins.kotlinAndroid)
     kotlin(Plugins.kotlinExtensions)
     kotlin(Plugins.kotlinKapt)
+    id(Plugins.googleServices)
     id(Plugins.variants)
     id(Plugins.compilation)
     id(Plugins.navigationArgs)
@@ -61,6 +62,7 @@ dependencies {
     implementation(Libs.room)
     implementation(Libs.roomRuntime)
     implementation(Libs.viewPager2)
+    implementation(Libs.firebaseAuth)
 
     kapt(Libs.daggerCompiler)
     kapt(Libs.daggerAndroidProcessor)

@@ -61,6 +61,9 @@ object Versions {
 
     // ViewPager2
     const val viewPager2 = "1.0.0"
+
+    // Firebase
+    const val firebase = "21.0.1"
 }
 
 object Libs {
@@ -117,6 +120,9 @@ object Libs {
 
     // ViewPager2
     const val viewPager2 = "androidx.viewpager2:viewpager2:${Versions.viewPager2}"
+
+    // Firebase Auth
+    const val firebaseAuth = "com.google.firebase:firebase-auth:${Versions.firebase}"
 }
 
 object Tests {

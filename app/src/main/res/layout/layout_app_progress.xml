@@ -23,5 +23,4 @@
         app:lottie_fileName="app_progress.json"
         app:lottie_loop="true" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

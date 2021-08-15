@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/fragment_coin_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_favorite_coin_list.xml" value="0.19425675675675674" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.19425675675675674" />
         <entry key="app/src/main/res/layout/item_coin.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_app_progress.xml" value="0.23505434782608695" />
         <entry key="app/src/main/res/layout/view_round_initials.xml" value="0.20695652173913043" />

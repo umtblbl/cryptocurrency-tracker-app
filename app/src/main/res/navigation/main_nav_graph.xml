@@ -2,12 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/homeFragment">
-
-    <fragment
-        android:id="@+id/coinListFragment"
-        android:name="com.umit.cryptocurrencytrackerapp.scenes.coinList.CoinListFragment"
-        android:label="CoinListFragment"/>
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -34,5 +29,9 @@
             app:argType="string" />
 
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.umit.cryptocurrencytrackerapp.scenes.login.LoginFragment"
+        android:label="LoginFragment" />
 
 </navigation>

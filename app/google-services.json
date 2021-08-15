@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "314570936845",
+    "project_id": "cryptocurrencytrackerapp-208d9",
+    "storage_bucket": "cryptocurrencytrackerapp-208d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314570936845:android:78c121d8948e5d0e163b44",
+        "android_client_info": {
+          "package_name": "com.umit.cryptocurrencytrackerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314570936845-0vass94qg8n39m1dv537nb11ph10f9j4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.umit.cryptocurrencytrackerapp",
+            "certificate_hash": "9fda2b5e1e1fc553aeedf9a4ced4129b2b4519e0"
+          }
+        },
+        {
+          "client_id": "314570936845-30souf7hm4t05kr4dtifgd4krljfvhl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyIH5dJiE3LC8nkBq4VnAhPk1FvNNcgoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314570936845-30souf7hm4t05kr4dtifgd4krljfvhl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
