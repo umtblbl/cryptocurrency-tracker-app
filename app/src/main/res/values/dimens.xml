@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- General -->
+    <dimen name="general_space_xxs">4dp</dimen>
+    <dimen name="general_space_xs">8dp</dimen>
+    <dimen name="general_space_xsm">12dp</dimen>
+    <dimen name="general_space_sm">16dp</dimen>
+    <dimen name="general_space_md">24dp</dimen>
+    <dimen name="general_space_lg">36dp</dimen>
+    <dimen name="general_space_xl">48dp</dimen>
+
     <!-- App Progress -->
     <dimen name="app_progress_size">180dp</dimen>
 

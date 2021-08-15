@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/item_coin_bg">
+
+        <com.umit.cryptocurrencytrackerapp.shared.view.RoundedCardView
+            android:id="@+id/firstLetterCardView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="16dp"
+            app:cardBackgroundColor="@color/mainGold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/firstLetterTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@{model.firstSymbolLetter}"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.umit.cryptocurrencytrackerapp.shared.view.RoundedCardView>
+
+        <TextView
+            android:id="@+id/coinSymbolTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:lines="1"
+            android:text="@{model.symbol}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/middleGuideline"
+            app:layout_constraintStart_toEndOf="@id/firstLetterCardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:text="@{model.name}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/middleGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middleGuideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:windowSoftInputMode="adjustNothing"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintGuide_percent="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

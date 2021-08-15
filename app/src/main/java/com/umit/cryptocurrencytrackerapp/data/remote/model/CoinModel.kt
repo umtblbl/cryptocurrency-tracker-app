@@ -6,4 +6,6 @@ data class CoinModel(
     val id: String?,
     val symbol: String?,
     val name: String?
-) : Serializable
+) : Serializable {
+    var color: Int = -1
+}

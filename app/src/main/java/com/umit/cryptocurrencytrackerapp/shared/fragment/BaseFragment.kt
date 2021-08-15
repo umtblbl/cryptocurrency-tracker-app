@@ -34,7 +34,7 @@ abstract class BaseFragment<VM : ViewModel, Binding : ViewDataBinding>(
     private val loadingRelay: BehaviorRelay<Boolean> = BehaviorRelay.createDefault(false)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, layoutResourceId(), container, false)
+        binding = DataBindingUtil.inflate(inflater, layoutResId, container, false)
         viewModel.activityIndicator.subscribe(loadingRelay).disposed(by = disposeBag)
         listenLoading()
         listenError()

@@ -2,8 +2,8 @@ package com.umit.cryptocurrencytrackerapp.scenes.coinList
 
 import android.util.Log
 import com.jakewharton.rxrelay3.BehaviorRelay
-import com.umit.cryptocurrencytrackerapp.data.remote.model.CoinModel
 import com.umit.cryptocurrencytrackerapp.domain.coins.FetchCoinListUseCase
+import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
 import com.umit.cryptocurrencytrackerapp.shared.viewModel.ViewModel
 import io.reactivex.rxjava3.core.Observable
@@ -16,7 +16,7 @@ class CoinListViewModel @Inject constructor(
 ) : ViewModel() {
 
     val stopRefreshLayout: PublishSubject<Unit> = PublishSubject.create()
-    val coinListRelay = BehaviorRelay.create<List<CoinModel>>()
+    val coinListRelay = BehaviorRelay.create<List<CoinItemModel>>()
 
     fun getCoin() {
         fetchCoinList()
@@ -25,7 +25,7 @@ class CoinListViewModel @Inject constructor(
             }.disposed(by = disposeBag)
     }
 
-    private fun fetchCoinList(): Observable<List<CoinModel>> {
+    private fun fetchCoinList(): Observable<List<CoinItemModel>> {
         return fetchCoinListUseCase()
             .compose(activityIndicator.trackActivitySingle())
             .toObservable()
