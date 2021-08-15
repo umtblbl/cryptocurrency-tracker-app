@@ -12,5 +12,11 @@
 
     <!-- App Progress -->
     <dimen name="app_progress_size">180dp</dimen>
+    <dimen name="toolbar_height">60dp</dimen>
+
+    <!-- Radio Group -->
+    <dimen name="radio_button_text_size">16sp</dimen>
+    <dimen name="radio_group_margin_vertical">20dp</dimen>
+    <dimen name="radio_group_margin_horizontal">40dp</dimen>
 
 </resources>

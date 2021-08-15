@@ -7,11 +7,32 @@
     <fragment
         android:id="@+id/coinListFragment"
         android:name="com.umit.cryptocurrencytrackerapp.scenes.coinList.CoinListFragment"
-        android:label="CoinListFragment" />
+        android:label="CoinListFragment"/>
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.umit.cryptocurrencytrackerapp.scenes.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.umit.cryptocurrencytrackerapp.scenes.coinDetail.CoinDetailFragment"
+        android:label="CoinDetailFragment">
+
+        <argument
+            android:name="coinId"
+            app:argType="string" />
+
+    </fragment>
 
 </navigation>

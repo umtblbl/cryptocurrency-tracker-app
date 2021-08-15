@@ -9,7 +9,7 @@ val CoinEntity.coinModel: CoinItemModel
             id = id,
             name = name,
             symbol = symbol,
-            firstSymbolLetter = symbol?.first().toString()
+            firstSymbolLetter = symbol?.getOrNull(1)?.toString()
         )
     }
 

@@ -12,7 +12,7 @@ interface CoinsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun add(vararg coin: CoinEntity): LongArray
 
-    @Query("SELECT * FROM coin WHERE name LIKE :text")
+    @Query("SELECT * FROM coin WHERE symbol LIKE :text")
     fun search(text: String?): List<CoinEntity>
 
     @Query("SELECT * FROM coin")

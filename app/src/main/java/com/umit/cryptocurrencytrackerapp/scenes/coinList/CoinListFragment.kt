@@ -2,12 +2,16 @@ package com.umit.cryptocurrencytrackerapp.scenes.coinList
 
 import android.widget.EditText
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.umit.cryptocurrencytrackerapp.R
 import com.umit.cryptocurrencytrackerapp.databinding.FragmentCoinListBinding
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
+import com.umit.cryptocurrencytrackerapp.scenes.home.HomeFragmentDirections
 import com.umit.cryptocurrencytrackerapp.shared.adapter.RecyclerViewBasicAdapter
+import com.umit.cryptocurrencytrackerapp.shared.extensions.action
 import com.umit.cryptocurrencytrackerapp.shared.extensions.changes
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
+import com.umit.cryptocurrencytrackerapp.shared.extensions.showKeyboard
 import com.umit.cryptocurrencytrackerapp.shared.fragment.BaseFragment
 import io.reactivex.rxjava3.kotlin.subscribeBy
 
@@ -50,6 +54,13 @@ class CoinListFragment(
             val color = ContextCompat.getColor(requireContext(), R.color.white)
             setTextColor(color)
             setHintTextColor(color)
+
+            binding.coinSearchView
+                .action()
+                .subscribeBy {
+                    binding.coinSearchView.isIconified = false
+                    context.showKeyboard(this)
+                }.disposed(by = disposeBag)
         }
     }
 
@@ -59,7 +70,11 @@ class CoinListFragment(
 
         adapter.modelSelected
             .subscribeBy { coinModel ->
-                println(coinModel.name)
+                coinModel.id?.let { coinId ->
+                    findNavController().navigate(
+                        HomeFragmentDirections.actionHomeFragmentToCoinDetailFragment(coinId)
+                    )
+                }
             }.disposed(by = disposeBag)
     }
 }

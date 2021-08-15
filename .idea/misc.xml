@@ -9,7 +9,8 @@
         <entry key="app/src/main/res/drawable/rounded_bg.xml" value="0.31979166666666664" />
         <entry key="app/src/main/res/drawable/search_view_bg.xml" value="0.20743243243243242" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25181159420289856" />
-        <entry key="app/src/main/res/layout/fragment_coin_detail.xml" value="0.19425675675675674" />
+        <entry key="app/src/main/res/layout/dialog_refresh_interval.xml" value="0.19425675675675674" />
+        <entry key="app/src/main/res/layout/fragment_coin_detail.xml" value="0.2527933940276813" />
         <entry key="app/src/main/res/layout/fragment_coin_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_favorite_coin_list.xml" value="0.19425675675675674" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.335" />

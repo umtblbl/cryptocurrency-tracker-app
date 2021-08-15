@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.jakewharton.rxrelay3.BehaviorRelay
 import com.umit.cryptocurrencytrackerapp.di.Injectable
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
@@ -16,6 +17,7 @@ import com.umit.cryptocurrencytrackerapp.shared.view.AppProgress
 import com.umit.cryptocurrencytrackerapp.shared.viewModel.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.subscribeBy
+import io.reactivex.rxjava3.subjects.PublishSubject
 import javax.inject.Inject
 import kotlin.reflect.KClass
 
@@ -33,13 +35,23 @@ abstract class BaseFragment<VM : ViewModel, Binding : ViewDataBinding>(
     private val appProgress by lazy { AppProgress(requireContext()) }
     private val loadingRelay: BehaviorRelay<Boolean> = BehaviorRelay.createDefault(false)
 
+    protected val backPressSubject: PublishSubject<Unit> = PublishSubject.create()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, layoutResId, container, false)
         viewModel.activityIndicator.subscribe(loadingRelay).disposed(by = disposeBag)
         listenLoading()
         listenError()
+        listenBackPress()
         setupView()
         return binding.root
+    }
+
+    private fun listenBackPress() {
+        backPressSubject
+            .subscribeBy {
+                findNavController().popBackStack()
+            }.disposed(by = disposeBag)
     }
 
     private fun listenError() {
