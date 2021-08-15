@@ -60,6 +60,7 @@ dependencies {
     implementation(Libs.dagger)
     implementation(Libs.room)
     implementation(Libs.roomRuntime)
+    implementation(Libs.viewPager2)
 
     kapt(Libs.daggerCompiler)
     kapt(Libs.daggerAndroidProcessor)

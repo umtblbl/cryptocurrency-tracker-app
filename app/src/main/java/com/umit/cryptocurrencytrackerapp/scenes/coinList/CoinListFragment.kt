@@ -1,9 +1,12 @@
 package com.umit.cryptocurrencytrackerapp.scenes.coinList
 
+import android.widget.EditText
+import androidx.core.content.ContextCompat
 import com.umit.cryptocurrencytrackerapp.R
 import com.umit.cryptocurrencytrackerapp.databinding.FragmentCoinListBinding
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 import com.umit.cryptocurrencytrackerapp.shared.adapter.RecyclerViewBasicAdapter
+import com.umit.cryptocurrencytrackerapp.shared.extensions.changes
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
 import com.umit.cryptocurrencytrackerapp.shared.fragment.BaseFragment
 import io.reactivex.rxjava3.kotlin.subscribeBy
@@ -12,15 +15,42 @@ class CoinListFragment(
     override val layoutResId: Int = R.layout.fragment_coin_list
 ) : BaseFragment<CoinListViewModel, FragmentCoinListBinding>(CoinListViewModel::class) {
 
-    var adapter: RecyclerViewBasicAdapter<CoinItemModel>
+    private var adapter: RecyclerViewBasicAdapter<CoinItemModel>
         get() = binding.coinRecyclerView.adapter as RecyclerViewBasicAdapter<CoinItemModel>
         set(value) {
             binding.coinRecyclerView.adapter = value
         }
 
     override fun setupView() {
-        viewModel.getCoin()
+
+        binding.coinSearchView
+            .changes()
+            .subscribeBy {
+                if (it.isSubmit) binding.coinSearchView.clearFocus()
+                viewModel.fetchSearchedCoinsSubject.onNext(it.text)
+            }.disposed(by = disposeBag)
+
+        binding.swipeRefreshLayout
+            .changes()
+            .subscribeBy {
+                viewModel.fetchCoinsRelay.accept(Unit)
+            }.disposed(by = disposeBag)
+
+        viewModel.stopRefreshLayout
+            .subscribeBy {
+                binding.swipeRefreshLayout.isRefreshing = false
+            }.disposed(by = disposeBag)
+
+        customizeSearchView()
         initCoinRecyclerView()
+    }
+
+    private fun customizeSearchView() {
+        binding.coinSearchView.findViewById<EditText>(R.id.search_src_text).apply {
+            val color = ContextCompat.getColor(requireContext(), R.color.white)
+            setTextColor(color)
+            setHintTextColor(color)
+        }
     }
 
     private fun initCoinRecyclerView() {

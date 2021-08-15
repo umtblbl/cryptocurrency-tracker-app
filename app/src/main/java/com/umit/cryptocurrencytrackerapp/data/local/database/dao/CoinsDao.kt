@@ -10,8 +10,11 @@ import com.umit.cryptocurrencytrackerapp.data.local.model.CoinEntity
 interface CoinsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addCoin(vararg coin: CoinEntity): LongArray
+    fun add(vararg coin: CoinEntity): LongArray
+
+    @Query("SELECT * FROM coin WHERE name LIKE :text")
+    fun search(text: String?): List<CoinEntity>
 
     @Query("SELECT * FROM coin")
-    fun fetchCoinList(): List<CoinEntity>
+    fun getAll(): List<CoinEntity>
 }

@@ -3,6 +3,7 @@ package com.umit.cryptocurrencytrackerapp.data.repository
 import com.umit.cryptocurrencytrackerapp.data.local.dataSource.CoinsLocalDataSource
 import com.umit.cryptocurrencytrackerapp.data.remote.dataSource.CoinsRemoteDataSource
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
+import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.Locale
@@ -30,9 +31,18 @@ class CoinsRepository @Inject constructor(
             }
     }
 
+    fun fetchSearchedCoinList(text: String?): Observable<List<CoinItemModel>> {
+        return Single.fromCallable {
+            if (text.isNullOrBlank())
+                coinsLocalDataSource.getAllCoin()
+            else
+                coinsLocalDataSource.searchCoin(text)
+        }.subscribeOn(Schedulers.io()).toObservable()
+    }
+
     private fun addCoinList(coinList: List<CoinItemModel>): Single<Unit> {
         return Single.fromCallable {
-            coinsLocalDataSource.add(coinList)
+            coinsLocalDataSource.addCoin(coinList)
         }.subscribeOn(Schedulers.io())
     }
 }

@@ -6,7 +6,7 @@ import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 val CoinEntity.coinModel: CoinItemModel
     get() {
         return CoinItemModel(
-            id = coinId,
+            id = id,
             name = name,
             symbol = symbol,
             firstSymbolLetter = symbol?.first().toString()
@@ -16,7 +16,7 @@ val CoinEntity.coinModel: CoinItemModel
 val CoinItemModel.coinEntity: CoinEntity
     get() {
         return CoinEntity(
-            coinId = id,
+            id = id ?: "",
             name = name,
             symbol = symbol,
         )

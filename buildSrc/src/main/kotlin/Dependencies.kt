@@ -58,6 +58,9 @@ object Versions {
 
     // Room
     const val room = "2.3.0"
+
+    // ViewPager2
+    const val viewPager2 = "1.0.0"
 }
 
 object Libs {
@@ -111,6 +114,9 @@ object Libs {
     const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
     const val room = "androidx.room:room-ktx:${Versions.room}"
     const val roomKapt = "androidx.room:room-compiler:${Versions.room}"
+
+    // ViewPager2
+    const val viewPager2 = "androidx.viewpager2:viewpager2:${Versions.viewPager2}"
 }
 
 object Tests {

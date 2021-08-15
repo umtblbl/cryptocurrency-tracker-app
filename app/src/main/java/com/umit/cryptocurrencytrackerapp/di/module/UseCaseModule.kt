@@ -2,6 +2,7 @@ package com.umit.cryptocurrencytrackerapp.di.module
 
 import com.umit.cryptocurrencytrackerapp.data.repository.CoinsRepository
 import com.umit.cryptocurrencytrackerapp.domain.coins.FetchCoinListUseCase
+import com.umit.cryptocurrencytrackerapp.domain.coins.FetchSearchedCoinListUseCase
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -13,5 +14,11 @@ class UseCaseModule {
     @Provides
     fun provideFetchCoinListUseCase(coinsRepository: CoinsRepository): FetchCoinListUseCase {
         return FetchCoinListUseCase(coinsRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideFetchSearchedCoinListUseCase(coinsRepository: CoinsRepository): FetchSearchedCoinListUseCase {
+        return FetchSearchedCoinListUseCase(coinsRepository)
     }
 }

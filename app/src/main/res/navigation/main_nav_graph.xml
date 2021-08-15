@@ -2,10 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/coinListFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/coinListFragment"
         android:name="com.umit.cryptocurrencytrackerapp.scenes.coinList.CoinListFragment"
         android:label="CoinListFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.umit.cryptocurrencytrackerapp.scenes.home.HomeFragment"
+        android:label="HomeFragment" />
+
 </navigation>
