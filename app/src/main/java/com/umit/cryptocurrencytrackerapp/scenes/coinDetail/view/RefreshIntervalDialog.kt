@@ -24,7 +24,7 @@ class RefreshIntervalDialog(context: Context) :
 
     override fun setupView() {
         window?.setBackgroundDrawable(
-            ContextCompat.getDrawable(context, R.drawable.item_coin_bg)
+            ContextCompat.getDrawable(context, R.drawable.item_bg)
         )
 
         binding.second5Radio

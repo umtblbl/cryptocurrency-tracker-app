@@ -15,21 +15,21 @@
                 android:id="@+id/registerTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Register"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:text="@string/login"
                 android:textColor="@color/white"
-                android:textSize="28sp"
+                android:textSize="@dimen/login_fragment_title_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieView"
-                android:layout_width="260dp"
-                android:layout_height="260dp"
+                android:layout_width="@dimen/login_fragment_lottie_view_size"
+                android:layout_height="@dimen/login_fragment_lottie_view_size"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/general_space_md"
                 android:background="@null"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -41,55 +41,68 @@
 
             <EditText
                 android:id="@+id/mailEditText"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="24dp"
+                android:layout_width="@dimen/auth_edit_text_width"
+                android:layout_height="@dimen/auth_edit_text_height"
+                android:layout_marginTop="@dimen/general_space_md"
                 android:background="@drawable/search_view_bg"
-                android:hint="E-mail"
-                android:paddingStart="8dp"
-                android:textSize="16sp"
+                android:hint="@string/email"
+                android:paddingStart="@dimen/general_space_xs"
                 android:textColor="@color/white"
                 android:textColorHint="@color/mainGray"
+                android:textSize="@dimen/general_size_sm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lottieView" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/passwordEditText"
-                android:layout_width="240dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="24dp"
+                android:layout_width="@dimen/auth_edit_text_width"
+                android:layout_height="@dimen/auth_edit_text_height"
+                android:layout_marginTop="@dimen/general_space_md"
                 android:background="@drawable/search_view_bg"
-                android:hint="Password"
-                android:paddingStart="8dp"
-                android:textSize="16sp"
+                android:hint="@string/password"
+                android:paddingStart="@dimen/general_space_xs"
                 android:textColor="@color/white"
                 android:textColorHint="@color/mainGray"
+                android:textSize="@dimen/general_size_sm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/mailEditText" />
 
-            <Button
+            <FrameLayout
                 android:id="@+id/registerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Register"
-                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:background="@drawable/app_ripple_bg"
+                android:clickable="true"
+                android:focusable="true"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+                app:layout_constraintTop_toBottomOf="@id/passwordEditText">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/general_space_xl"
+                    android:paddingVertical="@dimen/general_space_xs"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/general_size_sm" />
+
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/general_space_md"
                 android:clickable="true"
                 android:focusable="true"
-                android:text="Already have an account?"
+                android:text="@string/login_fragment_register_now"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="@dimen/general_size_sm"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registerButton" />

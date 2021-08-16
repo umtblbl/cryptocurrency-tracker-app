@@ -4,7 +4,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/item_coin_bg"
+        android:background="@drawable/item_bg"
         android:orientation="vertical"
         android:paddingHorizontal="48dp"
         android:paddingVertical="20dp">

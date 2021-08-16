@@ -1,10 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/mainNavyBlue">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/registerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/login_fragment_title_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieView"
+                android:layout_width="@dimen/login_fragment_lottie_view_size"
+                android:layout_height="@dimen/login_fragment_lottie_view_size"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerTextView"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="register_anim.json"
+                app:lottie_loop="true" />
+
+            <EditText
+                android:id="@+id/mailEditText"
+                android:layout_width="@dimen/auth_edit_text_width"
+                android:layout_height="@dimen/auth_edit_text_height"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:background="@drawable/search_view_bg"
+                android:hint="@string/email"
+                android:paddingStart="@dimen/general_space_xs"
+                android:textColor="@color/white"
+                android:textColorHint="@color/mainGray"
+                android:textSize="@dimen/general_size_sm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lottieView" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="@dimen/auth_edit_text_width"
+                android:layout_height="@dimen/auth_edit_text_height"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:background="@drawable/search_view_bg"
+                android:hint="@string/password"
+                android:paddingStart="@dimen/general_space_xs"
+                android:textColor="@color/white"
+                android:textColorHint="@color/mainGray"
+                android:textSize="@dimen/general_size_sm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mailEditText" />
+
+            <FrameLayout
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:background="@drawable/app_ripple_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditText">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/general_space_xl"
+                    android:paddingVertical="@dimen/general_space_xs"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/general_size_sm" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/general_space_md"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/register_fragment_login_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/general_size_sm"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </layout>

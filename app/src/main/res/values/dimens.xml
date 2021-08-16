@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- General -->
+    <!-- General DP -->
     <dimen name="general_space_xxs">4dp</dimen>
     <dimen name="general_space_xs">8dp</dimen>
     <dimen name="general_space_xsm">12dp</dimen>
@@ -9,6 +9,11 @@
     <dimen name="general_space_md">24dp</dimen>
     <dimen name="general_space_lg">36dp</dimen>
     <dimen name="general_space_xl">48dp</dimen>
+
+    <!-- General SP -->
+    <dimen name="general_size_xsm">12sp</dimen>
+    <dimen name="general_size_sm">16sp</dimen>
+    <dimen name="general_size_md">24sp</dimen>
 
     <!-- App Progress -->
     <dimen name="app_progress_size">180dp</dimen>
@@ -18,5 +23,13 @@
     <dimen name="radio_button_text_size">16sp</dimen>
     <dimen name="radio_group_margin_vertical">20dp</dimen>
     <dimen name="radio_group_margin_horizontal">40dp</dimen>
+
+    <!-- LoginFragment & RegisterFragment -->
+    <dimen name="auth_edit_text_width">240dp</dimen>
+    <dimen name="auth_edit_text_height">40dp</dimen>
+
+    <!-- Login Fragment -->
+    <dimen name="login_fragment_lottie_view_size">260dp</dimen>
+    <dimen name="login_fragment_title_text_size">28sp</dimen>
 
 </resources>

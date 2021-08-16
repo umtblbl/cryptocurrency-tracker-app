@@ -1,3 +1,14 @@
 <resources>
+
+    <!-- General Texts -->
     <string name="app_name_prod">Cryptocurrency Tracker</string>
+    <string name="register">Register</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+
+    <!-- LoginFragment -->
+    <string name="register_fragment_login_now">Already have an account? Sign in now.</string>
+    <string name="login">Login</string>
+    <string name="login_fragment_register_now">Don\'t have an account? Sign up now.</string>
+
 </resources>

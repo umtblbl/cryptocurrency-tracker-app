@@ -33,5 +33,9 @@
         android:id="@+id/loginFragment"
         android:name="com.umit.cryptocurrencytrackerapp.scenes.login.LoginFragment"
         android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.umit.cryptocurrencytrackerapp.scenes.register.RegisterFragment"
+        android:label="RegisterFragment" />
 
 </navigation>

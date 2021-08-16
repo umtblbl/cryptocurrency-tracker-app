@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:background="@drawable/item_coin_bg">
+        android:background="@drawable/item_bg">
 
         <com.umit.cryptocurrencytrackerapp.shared.view.RoundedCardView
             android:id="@+id/firstLetterCardView"
