@@ -10,5 +10,7 @@
     <string name="register_fragment_login_now">Already have an account? Sign in now.</string>
     <string name="login">Login</string>
     <string name="login_fragment_register_now">Don\'t have an account? Sign up now.</string>
+    <string name="auth_toast_info_error_title">incorrect Entry</string>
+    <string name="auth_toast_info_error_text">Please check the information.</string>
 
 </resources>

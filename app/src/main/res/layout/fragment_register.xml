@@ -46,25 +46,29 @@
                 android:layout_marginTop="@dimen/general_space_md"
                 android:background="@drawable/search_view_bg"
                 android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:paddingStart="@dimen/general_space_xs"
                 android:textColor="@color/white"
                 android:textColorHint="@color/mainGray"
-                android:textSize="@dimen/general_size_sm"
+                android:textCursorDrawable="@drawable/edittext_cursor_bg"
+                android:textSize="@dimen/general_size_xsm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lottieView" />
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <EditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="@dimen/auth_edit_text_width"
                 android:layout_height="@dimen/auth_edit_text_height"
                 android:layout_marginTop="@dimen/general_space_md"
                 android:background="@drawable/search_view_bg"
                 android:hint="@string/password"
+                android:inputType="textPassword"
                 android:paddingStart="@dimen/general_space_xs"
                 android:textColor="@color/white"
                 android:textColorHint="@color/mainGray"
-                android:textSize="@dimen/general_size_sm"
+                android:textCursorDrawable="@drawable/edittext_cursor_bg"
+                android:textSize="@dimen/general_size_xsm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/mailEditText" />
@@ -94,15 +98,18 @@
             </FrameLayout>
 
             <TextView
+                android:id="@+id/loginNowTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/general_space_md"
+                android:layout_marginBottom="@dimen/general_space_md"
                 android:clickable="true"
                 android:focusable="true"
                 android:text="@string/register_fragment_login_now"
                 android:textColor="@color/white"
                 android:textSize="@dimen/general_size_sm"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/registerButton" />

@@ -1,5 +1,6 @@
 package com.umit.cryptocurrencytrackerapp.scenes.coinList
 
+import android.os.Build
 import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
@@ -49,21 +50,6 @@ class CoinListFragment(
         initCoinRecyclerView()
     }
 
-    private fun customizeSearchView() {
-        binding.coinSearchView.findViewById<EditText>(R.id.search_src_text).apply {
-            val color = ContextCompat.getColor(requireContext(), R.color.white)
-            setTextColor(color)
-            setHintTextColor(color)
-
-            binding.coinSearchView
-                .action()
-                .subscribeBy {
-                    binding.coinSearchView.isIconified = false
-                    context.showKeyboard(this)
-                }.disposed(by = disposeBag)
-        }
-    }
-
     private fun initCoinRecyclerView() {
         adapter = RecyclerViewBasicAdapter(layoutId = R.layout.item_coin)
         viewModel.coinListRelay.subscribeBy { adapter.list = it }.disposed(by = disposeBag)
@@ -76,5 +62,24 @@ class CoinListFragment(
                     )
                 }
             }.disposed(by = disposeBag)
+    }
+
+    private fun customizeSearchView() {
+        binding.coinSearchView.findViewById<EditText>(R.id.search_src_text).apply {
+            ContextCompat.getColor(requireContext(), R.color.white).let { color ->
+                setTextColor(color)
+                setHintTextColor(color)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                setTextCursorDrawable(R.drawable.edittext_cursor_bg)
+            }
+
+            binding.coinSearchView
+                .action()
+                .subscribeBy {
+                    binding.coinSearchView.isIconified = false
+                    context.showKeyboard(this)
+                }.disposed(by = disposeBag)
+        }
     }
 }

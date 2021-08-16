@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.jakewharton.rxrelay3.BehaviorRelay
+import com.tapadoo.alerter.Alerter
 import com.umit.cryptocurrencytrackerapp.di.Injectable
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
 import com.umit.cryptocurrencytrackerapp.shared.view.AppProgress
@@ -57,6 +58,12 @@ abstract class BaseFragment<VM : ViewModel, Binding : ViewDataBinding>(
     private fun listenError() {
         viewModel.error.subscribeBy {
             Toast.makeText(context, it.localizedMessage, Toast.LENGTH_SHORT).show()
+            activity?.let { activity ->
+                Alerter.create(activity)
+                    .setText(it.localizedMessage?.toString() ?: "unknown error")
+                    .setDuration(3000)
+                    .show()
+            }
         }.disposed(by = disposeBag)
     }
 

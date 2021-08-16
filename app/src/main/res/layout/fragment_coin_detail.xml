@@ -33,36 +33,39 @@
 
                 <ImageView
                     android:id="@+id/backImageView"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:foreground="?selectableItemBackground"
                     android:src="@drawable/back_icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/refreshIntervalImageView"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:foreground="?selectableItemBackground"
                     android:src="@drawable/timer_icon"
                     app:layout_constraintEnd_toStartOf="@id/favoriteImageView"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/favoriteImageView"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="16dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:foreground="?selectableItemBackground"
                     android:src="@{isFavorite ? @drawable/favorite_icon :  @drawable/not_favorite_icon}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

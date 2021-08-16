@@ -64,6 +64,9 @@ object Versions {
 
     // Firebase
     const val firebase = "21.0.1"
+
+    // AlerterToast
+    const val alerterToast = "7.1.0"
 }
 
 object Libs {
@@ -123,6 +126,9 @@ object Libs {
 
     // Firebase Auth
     const val firebaseAuth = "com.google.firebase:firebase-auth:${Versions.firebase}"
+
+    // AlerterToast
+    const val alerterToast = "com.github.tapadoo:alerter:${Versions.alerterToast}"
 }
 
 object Tests {
