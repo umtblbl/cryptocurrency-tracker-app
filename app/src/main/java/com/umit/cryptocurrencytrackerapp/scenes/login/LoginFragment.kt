@@ -14,12 +14,7 @@ class LoginFragment(
     override val layoutResId: Int = R.layout.fragment_login
 ) : BaseFragment<LoginViewModel, FragmentLoginBinding>(LoginViewModel::class) {
 
-    private val appErrorToast by lazy {
-        AppToast(
-            activity = activity,
-            type = ToastType.AuthInfoError
-        )
-    }
+    private val errorToast by lazy { AppToast(activity = activity, type = ToastType.AuthInfoError) }
 
     override fun setupView() {
 
@@ -49,7 +44,7 @@ class LoginFragment(
                         LoginFragmentDirections.actionLoginFragmentToHomeFragment()
                     )
                 } else {
-                    appErrorToast.show()
+                    errorToast.show()
                 }
             }.disposed(by = disposeBag)
     }

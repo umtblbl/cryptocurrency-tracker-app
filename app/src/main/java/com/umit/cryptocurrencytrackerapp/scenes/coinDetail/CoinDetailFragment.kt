@@ -2,9 +2,13 @@ package com.umit.cryptocurrencytrackerapp.scenes.coinDetail
 
 import android.view.View
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.umit.cryptocurrencytrackerapp.R
 import com.umit.cryptocurrencytrackerapp.databinding.FragmentCoinDetailBinding
 import com.umit.cryptocurrencytrackerapp.scenes.coinDetail.view.RefreshIntervalDialog
+import com.umit.cryptocurrencytrackerapp.shared.dialog.AppToast
+import com.umit.cryptocurrencytrackerapp.shared.dialog.ToastType
 import com.umit.cryptocurrencytrackerapp.shared.extensions.action
 import com.umit.cryptocurrencytrackerapp.shared.extensions.changes
 import com.umit.cryptocurrencytrackerapp.shared.extensions.disposed
@@ -17,6 +21,10 @@ class CoinDetailFragment(
 
     private val args: CoinDetailFragmentArgs by navArgs()
     private val refreshIntervalDialog by lazy { RefreshIntervalDialog(requireContext()) }
+    private val fireStore by lazy { FirebaseFirestore.getInstance() }
+    private val firebaseAuth by lazy { FirebaseAuth.getInstance() }
+    private val errorToast by lazy { AppToast(activity = activity, type = ToastType.ProcessFailed) }
+    private val successToast by lazy { AppToast(activity = activity, type = ToastType.ProcessSuccessful) }
 
     override fun setupView() {
         binding.backImageView.action().subscribe(super.backPressSubject)
@@ -25,7 +33,6 @@ class CoinDetailFragment(
         binding.favoriteImageView
             .action()
             .subscribeBy {
-                println("favorite")
             }.disposed(by = disposeBag)
 
         binding.refreshIntervalImageView
@@ -34,7 +41,7 @@ class CoinDetailFragment(
                 refreshIntervalDialog.show()
             }.disposed(by = disposeBag)
 
-        viewModel.coinDetailSubject
+        viewModel.coinDetailRelay
             .subscribeBy { coinDetailModel ->
                 binding.container.visibility = View.VISIBLE
                 binding.model = coinDetailModel

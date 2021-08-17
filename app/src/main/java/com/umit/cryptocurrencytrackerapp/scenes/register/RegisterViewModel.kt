@@ -28,7 +28,7 @@ class RegisterViewModel @Inject constructor(
     private fun registerUser(email: String?, password: String?): Observable<Boolean>? {
         return registerUseCase(RegisterUseCase.Params(email, password))
             .compose(error.trackError())
-            .onErrorResumeNext { error ->
+            .onErrorResumeNext {
                 Observable.empty()
             }
     }

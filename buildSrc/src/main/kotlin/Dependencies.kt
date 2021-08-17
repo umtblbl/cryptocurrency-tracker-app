@@ -1,8 +1,8 @@
 object Apps {
-    const val compileSdk = 29
+    const val compileSdk = 30
     const val buildTools = "30.0.3"
     const val minSdk = 26
-    const val targetSdk = 29
+    const val targetSdk = 30
     const val applicationId = "com.umit.cryptocurrencytrackerapp"
     const val versionCode = 1
     const val versionName = "1.0"
@@ -18,9 +18,6 @@ object Versions {
     const val fragment = "1.3.4"
     const val kotlin = "1.5.10"
     const val ktLint = "0.41.0"
-    const val lifecycleViewModel = "2.3.1"
-    const val lifecycleExtensions = "2.2.0"
-    const val legacy = "1.0.0"
     const val googleServices = "4.3.8"
     const val legacySupport = "1.0.0"
     const val materialDesign = "1.4.0"
@@ -65,6 +62,9 @@ object Versions {
     // Firebase
     const val firebase = "21.0.1"
 
+    // Firebase FireStore
+    const val firebaseFireStore = "23.0.3"
+
     // AlerterToast
     const val alerterToast = "7.1.0"
 }
@@ -76,9 +76,6 @@ object Libs {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val fragment = "androidx.fragment:fragment:${Versions.fragment}"
     const val ktLint = "com.pinterest:ktlint:${Versions.ktLint}"
-    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModel}"
-    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
-    const val googleMaterial = "com.google.android.material:material:${Versions.appCompat}"
     const val legacySupport = "androidx.legacy:legacy-support-v4:${Versions.legacySupport}"
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
@@ -92,7 +89,6 @@ object Libs {
 
     // Navigation
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
-    const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // Gson
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
@@ -126,6 +122,9 @@ object Libs {
 
     // Firebase Auth
     const val firebaseAuth = "com.google.firebase:firebase-auth:${Versions.firebase}"
+
+    // Firebase FireStore
+    const val firebaseFireStore = "com.google.firebase:firebase-firestore:${Versions.firebaseFireStore}"
 
     // AlerterToast
     const val alerterToast = "com.github.tapadoo:alerter:${Versions.alerterToast}"

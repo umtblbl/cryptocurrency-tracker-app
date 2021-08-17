@@ -28,7 +28,7 @@ class LoginViewModel @Inject constructor(
     private fun loginUser(email: String?, password: String?): Observable<Boolean>? {
         return loginUseCase(LoginUseCase.Params(email, password))
             .compose(error.trackError())
-            .onErrorResumeNext { error ->
+            .onErrorResumeNext {
                 Observable.empty()
             }
     }

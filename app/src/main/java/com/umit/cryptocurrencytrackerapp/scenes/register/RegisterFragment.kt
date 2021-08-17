@@ -14,12 +14,7 @@ class RegisterFragment(
     override val layoutResId: Int = R.layout.fragment_register
 ) : BaseFragment<RegisterViewModel, FragmentRegisterBinding>(RegisterViewModel::class) {
 
-    private val appErrorToast by lazy {
-        AppToast(
-            activity = activity,
-            type = ToastType.AuthInfoError
-        )
-    }
+    private val errorToast by lazy { AppToast(activity = activity, type = ToastType.AuthInfoError) }
 
     override fun setupView() {
         binding.loginNowTextView
@@ -48,7 +43,7 @@ class RegisterFragment(
                         RegisterFragmentDirections.actionRegisterFragmentToHomeFragment()
                     )
                 } else {
-                    appErrorToast.show()
+                    errorToast.show()
                 }
             }.disposed(by = disposeBag)
     }

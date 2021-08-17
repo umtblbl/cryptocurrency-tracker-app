@@ -1,6 +1,5 @@
 package com.umit.cryptocurrencytrackerapp.scenes.coinDetail
 
-import android.util.Log
 import com.jakewharton.rxrelay3.BehaviorRelay
 import com.umit.cryptocurrencytrackerapp.domain.coins.FetchCoinDetailUseCase
 import com.umit.cryptocurrencytrackerapp.scenes.coinDetail.model.CoinDetailItemModel
@@ -21,52 +20,53 @@ class CoinDetailViewModel @Inject constructor(
 
     // RefreshLayout
     val stopRefreshLayout: PublishSubject<Unit> = PublishSubject.create()
+
     // Data Fetch Subject
     val fetchCoinDetailRelay: BehaviorRelay<String> = BehaviorRelay.create()
+
     // Data
-    val coinDetailSubject: PublishSubject<CoinDetailItemModel> = PublishSubject.create()
+    val coinDetailRelay: BehaviorRelay<CoinDetailItemModel> = BehaviorRelay.create()
+
     // Timer
     val coinRefreshingIntervalRelay: BehaviorRelay<Long> = BehaviorRelay.create()
+
     // Disposable
     private var timerDisposable: Disposable? = null
 
     init {
         fetchCoinDetailRelay
-            .flatMap { coindId ->
-                fetchCoinDetail(coindId)
+            .flatMap { coinId ->
+                fetchCoinDetail(coinId)
             }.subscribeBy { coinDetailItemModel ->
-                coinDetailSubject.onNext(coinDetailItemModel)
+                coinDetailRelay.accept(coinDetailItemModel)
             }.disposed(by = disposeBag)
 
         coinRefreshingIntervalRelay
             .subscribeBy { interval ->
-                startCoinRefreshing()
+                startCoinRefreshing(interval)
             }.disposed(by = disposeBag)
     }
 
-    private fun fetchCoinDetail(coindId: String?): Observable<CoinDetailItemModel> {
-        return fetchCoinDetailUseCase(FetchCoinDetailUseCase.Params(coindId))
+    private fun fetchCoinDetail(coinId: String?): Observable<CoinDetailItemModel> {
+        return fetchCoinDetailUseCase(FetchCoinDetailUseCase.Params(coinId))
             .compose(activityIndicator.trackActivitySingle())
             .toObservable()
             .compose(error.trackError())
-            .onErrorResumeNext { error ->
-                Log.d("ERROR:", error.toString())
+            .onErrorResumeNext {
                 Observable.empty()
             }.doFinally { stopRefreshLayout.onNext(Unit) }
     }
 
-    private fun startCoinRefreshing() {
-        coinRefreshingIntervalRelay.value?.let { interval ->
-            timerDisposable?.dispose()
-            timerDisposable = Observable.create<String> { emitter ->
-                fetchCoinDetailRelay.accept(fetchCoinDetailRelay.value)
-                emitter.onComplete()
-            }.timer(interval)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe()
-                .disposed(by = disposeBag)
-        }
+    private fun startCoinRefreshing(interval: Long) {
+        timerDisposable?.dispose()
+        timerDisposable = Observable.create<String> { emitter ->
+            fetchCoinDetailRelay.accept(fetchCoinDetailRelay.value)
+            emitter.onComplete()
+        }.timer(interval)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe()
+            .disposed(by = disposeBag)
     }
 
     fun stopCoinRefreshing() {

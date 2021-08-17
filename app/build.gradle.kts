@@ -63,6 +63,7 @@ dependencies {
     implementation(Libs.roomRuntime)
     implementation(Libs.viewPager2)
     implementation(Libs.firebaseAuth)
+    implementation(Libs.firebaseFireStore)
     implementation(Libs.alerterToast)
 
     kapt(Libs.daggerCompiler)
