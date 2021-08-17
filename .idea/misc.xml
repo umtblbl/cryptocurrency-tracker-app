@@ -9,14 +9,19 @@
         <entry key="app/src/main/res/drawable/app_button_selected_bg.xml" value="0.16858108108108108" />
         <entry key="app/src/main/res/drawable/app_button_selector.xml" value="0.16858108108108108" />
         <entry key="app/src/main/res/drawable/app_circular_ripple_bg.xml" value="0.20743243243243242" />
+        <entry key="app/src/main/res/drawable/app_ripple_bg.xml" value="0.20743243243243242" />
         <entry key="app/src/main/res/drawable/app_ripple_effect.xml" value="0.16858108108108108" />
         <entry key="app/src/main/res/drawable/back_icon.xml" value="0.2448298865910607" />
         <entry key="app/src/main/res/drawable/dolar_icon.xml" value="0.2448298865910607" />
         <entry key="app/src/main/res/drawable/edittext_cursor_bg.xml" value="0.2448298865910607" />
+        <entry key="app/src/main/res/drawable/exit_icon.xml" value="0.12013888888888889" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.12013888888888889" />
         <entry key="app/src/main/res/drawable/item_bg.xml" value="0.16858108108108108" />
         <entry key="app/src/main/res/drawable/item_coin_bg.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/not_favorite_icon.xml" value="0.12013888888888889" />
         <entry key="app/src/main/res/drawable/rounded_bg.xml" value="0.31979166666666664" />
         <entry key="app/src/main/res/drawable/search_view_bg.xml" value="0.20743243243243242" />
+        <entry key="app/src/main/res/drawable/timer_icon.xml" value="0.12013888888888889" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25181159420289856" />
         <entry key="app/src/main/res/layout/dialog_refresh_interval.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_coin_detail.xml" value="0.2527933940276813" />
