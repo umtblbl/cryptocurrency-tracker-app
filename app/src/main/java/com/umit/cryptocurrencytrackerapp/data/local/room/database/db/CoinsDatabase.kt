@@ -1,9 +1,9 @@
-package com.umit.cryptocurrencytrackerapp.data.local.database.db
+package com.umit.cryptocurrencytrackerapp.data.local.room.database.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.umit.cryptocurrencytrackerapp.data.local.database.dao.CoinsDao
-import com.umit.cryptocurrencytrackerapp.data.local.model.CoinEntity
+import com.umit.cryptocurrencytrackerapp.data.local.room.database.dao.CoinsDao
+import com.umit.cryptocurrencytrackerapp.data.local.room.model.CoinEntity
 
 @Database(
     entities = [CoinEntity::class],

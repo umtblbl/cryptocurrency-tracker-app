@@ -1,8 +1,8 @@
-package com.umit.cryptocurrencytrackerapp.data.remote.dataSource
+package com.umit.cryptocurrencytrackerapp.data.remote.api.dataSource
 
 import com.umit.cryptocurrencytrackerapp.data.remote.api.CoinsAPI
-import com.umit.cryptocurrencytrackerapp.data.remote.model.CoinDetailModel
-import com.umit.cryptocurrencytrackerapp.data.remote.model.CoinModel
+import com.umit.cryptocurrencytrackerapp.data.remote.api.model.CoinDetailModel
+import com.umit.cryptocurrencytrackerapp.data.remote.api.model.CoinModel
 import com.umit.cryptocurrencytrackerapp.shared.error.NetworkErrorType
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single

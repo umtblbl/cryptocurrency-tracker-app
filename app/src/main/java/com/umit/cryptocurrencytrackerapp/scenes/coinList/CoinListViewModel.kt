@@ -20,9 +20,11 @@ class CoinListViewModel @Inject constructor(
 
     // RefreshLayout
     val stopRefreshLayout: PublishSubject<Unit> = PublishSubject.create()
+
     // Data Fetch Subject
     val fetchCoinsRelay: BehaviorRelay<Unit> = BehaviorRelay.createDefault(Unit)
     val fetchSearchedCoinsSubject: PublishSubject<String?> = PublishSubject.create()
+
     // Data
     val coinListRelay: BehaviorRelay<List<CoinItemModel>> = BehaviorRelay.create()
 

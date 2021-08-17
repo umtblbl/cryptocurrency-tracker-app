@@ -1,7 +1,7 @@
 package com.umit.cryptocurrencytrackerapp.data.repository
 
-import com.umit.cryptocurrencytrackerapp.data.local.dataSource.CoinsLocalDataSource
-import com.umit.cryptocurrencytrackerapp.data.remote.dataSource.CoinsRemoteDataSource
+import com.umit.cryptocurrencytrackerapp.data.local.room.dataSource.CoinsLocalDataSource
+import com.umit.cryptocurrencytrackerapp.data.remote.api.dataSource.CoinsRemoteDataSource
 import com.umit.cryptocurrencytrackerapp.scenes.coinDetail.model.CoinDetailItemModel
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 import com.umit.cryptocurrencytrackerapp.shared.error.NetworkErrorType

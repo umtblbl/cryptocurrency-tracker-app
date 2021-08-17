@@ -7,13 +7,14 @@ import androidx.lifecycle.ViewModel as VM
 
 abstract class ViewModel : VM() {
 
+    protected val changesDisposeBag: CompositeDisposable = CompositeDisposable()
     protected val disposeBag: CompositeDisposable = CompositeDisposable()
     val activityIndicator: RxActivityIndicator = RxActivityIndicator()
     val error: ErrorTracker = ErrorTracker()
 
     public override fun onCleared() {
         super.onCleared()
-        disposeBag.dispose()
+        changesDisposeBag.dispose()
     }
 
     fun clearSubscriptions() {

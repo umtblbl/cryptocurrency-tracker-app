@@ -1,10 +1,10 @@
-package com.umit.cryptocurrencytrackerapp.data.local.database.dao
+package com.umit.cryptocurrencytrackerapp.data.local.room.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.umit.cryptocurrencytrackerapp.data.local.model.CoinEntity
+import com.umit.cryptocurrencytrackerapp.data.local.room.model.CoinEntity
 
 @Dao
 interface CoinsDao {

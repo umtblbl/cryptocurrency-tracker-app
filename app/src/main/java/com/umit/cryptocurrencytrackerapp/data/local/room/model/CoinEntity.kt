@@ -1,4 +1,4 @@
-package com.umit.cryptocurrencytrackerapp.data.local.model
+package com.umit.cryptocurrencytrackerapp.data.local.room.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

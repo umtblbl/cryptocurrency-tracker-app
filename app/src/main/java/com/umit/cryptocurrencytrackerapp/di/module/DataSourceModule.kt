@@ -1,9 +1,10 @@
 package com.umit.cryptocurrencytrackerapp.di.module
 
-import com.umit.cryptocurrencytrackerapp.data.local.dataSource.CoinsLocalDataSource
-import com.umit.cryptocurrencytrackerapp.data.local.database.dao.CoinsDao
+import com.umit.cryptocurrencytrackerapp.data.local.room.dataSource.CoinsLocalDataSource
+import com.umit.cryptocurrencytrackerapp.data.local.room.database.dao.CoinsDao
 import com.umit.cryptocurrencytrackerapp.data.remote.api.CoinsAPI
-import com.umit.cryptocurrencytrackerapp.data.remote.dataSource.CoinsRemoteDataSource
+import com.umit.cryptocurrencytrackerapp.data.remote.api.dataSource.CoinsRemoteDataSource
+import com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataStore.FavoriteCoinsRemoteDataSource
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -21,5 +22,11 @@ class DataSourceModule {
     @Provides
     fun provideCoinsLocalDataSource(coinsDao: CoinsDao): CoinsLocalDataSource {
         return CoinsLocalDataSource(coinsDao)
+    }
+
+    @Singleton
+    @Provides
+    fun provideFavoriteCoinsRemoteDataSource(): FavoriteCoinsRemoteDataSource {
+        return FavoriteCoinsRemoteDataSource()
     }
 }

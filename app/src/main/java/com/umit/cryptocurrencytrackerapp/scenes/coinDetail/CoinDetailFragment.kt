@@ -2,8 +2,6 @@ package com.umit.cryptocurrencytrackerapp.scenes.coinDetail
 
 import android.view.View
 import androidx.navigation.fragment.navArgs
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.umit.cryptocurrencytrackerapp.R
 import com.umit.cryptocurrencytrackerapp.databinding.FragmentCoinDetailBinding
 import com.umit.cryptocurrencytrackerapp.scenes.coinDetail.view.RefreshIntervalDialog
@@ -21,19 +19,13 @@ class CoinDetailFragment(
 
     private val args: CoinDetailFragmentArgs by navArgs()
     private val refreshIntervalDialog by lazy { RefreshIntervalDialog(requireContext()) }
-    private val fireStore by lazy { FirebaseFirestore.getInstance() }
-    private val firebaseAuth by lazy { FirebaseAuth.getInstance() }
     private val errorToast by lazy { AppToast(activity = activity, type = ToastType.ProcessFailed) }
     private val successToast by lazy { AppToast(activity = activity, type = ToastType.ProcessSuccessful) }
 
     override fun setupView() {
         binding.backImageView.action().subscribe(super.backPressSubject)
+        binding.favoriteImageView.action().subscribe(viewModel.favoriteAction)
         viewModel.fetchCoinDetailRelay.accept(args.coinId)
-
-        binding.favoriteImageView
-            .action()
-            .subscribeBy {
-            }.disposed(by = disposeBag)
 
         binding.refreshIntervalImageView
             .action()
@@ -45,6 +37,17 @@ class CoinDetailFragment(
             .subscribeBy { coinDetailModel ->
                 binding.container.visibility = View.VISIBLE
                 binding.model = coinDetailModel
+            }.disposed(by = disposeBag)
+
+        viewModel.isFavoriteCoinRelay
+            .subscribeBy { isFavorite ->
+                binding.isFavorite = isFavorite
+            }.disposed(by = disposeBag)
+
+        viewModel.showToastRelay
+            .subscribeBy { isSuccess ->
+                if (isSuccess) successToast.show()
+                else errorToast.show()
             }.disposed(by = disposeBag)
 
         refreshIntervalDialog

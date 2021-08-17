@@ -1,6 +1,6 @@
-package com.umit.cryptocurrencytrackerapp.data.local.dataSource
+package com.umit.cryptocurrencytrackerapp.data.local.room.dataSource
 
-import com.umit.cryptocurrencytrackerapp.data.local.database.dao.CoinsDao
+import com.umit.cryptocurrencytrackerapp.data.local.room.database.dao.CoinsDao
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 import com.umit.cryptocurrencytrackerapp.shared.extensions.coinEntity
 import com.umit.cryptocurrencytrackerapp.shared.extensions.coinModel

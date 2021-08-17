@@ -8,7 +8,7 @@ import com.umit.cryptocurrencytrackerapp.R
 enum class ToastType(val titleResId: Int, val textResId: Int) {
     AuthInfoError(R.string.toast_info_error_title, R.string.toast_info_error_text),
     ProcessFailed(R.string.toast_process_failed_title, R.string.toast_process_failed_text),
-    ProcessSuccessful(R.string.toast_process_successful_title, R.string.toast_process_failed_title)
+    ProcessSuccessful(R.string.toast_process_successful_title, R.string.toast_process_successful_text)
 }
 
 class AppToast(val activity: Activity?, val type: ToastType) {

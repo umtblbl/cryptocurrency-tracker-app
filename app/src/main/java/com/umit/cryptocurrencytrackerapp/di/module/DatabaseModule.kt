@@ -2,8 +2,8 @@ package com.umit.cryptocurrencytrackerapp.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.umit.cryptocurrencytrackerapp.data.local.database.dao.CoinsDao
-import com.umit.cryptocurrencytrackerapp.data.local.database.db.CoinsDatabase
+import com.umit.cryptocurrencytrackerapp.data.local.room.database.dao.CoinsDao
+import com.umit.cryptocurrencytrackerapp.data.local.room.database.db.CoinsDatabase
 import com.umit.cryptocurrencytrackerapp.shared.Configs
 import dagger.Module
 import dagger.Provides

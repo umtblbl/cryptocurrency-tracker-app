@@ -18,5 +18,6 @@
     <string name="toast_process_successful_text">Process completed.</string>
     <string name="toast_process_failed_title">Unsuccessful</string>
     <string name="toast_process_failed_text">Process failed.</string>
+    <string name="favorite_coin_list_fragment_empty_list_message">You don\'t have any favorite coins</string>
 
 </resources>

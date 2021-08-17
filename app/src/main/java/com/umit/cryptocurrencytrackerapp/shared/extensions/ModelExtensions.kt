@@ -1,6 +1,6 @@
 package com.umit.cryptocurrencytrackerapp.shared.extensions
 
-import com.umit.cryptocurrencytrackerapp.data.local.model.CoinEntity
+import com.umit.cryptocurrencytrackerapp.data.local.room.model.CoinEntity
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 
 val CoinEntity.coinModel: CoinItemModel

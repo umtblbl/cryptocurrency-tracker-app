@@ -1,4 +1,4 @@
-package com.umit.cryptocurrencytrackerapp.data.remote.model
+package com.umit.cryptocurrencytrackerapp.data.remote.api.model
 
 import java.io.Serializable
 
