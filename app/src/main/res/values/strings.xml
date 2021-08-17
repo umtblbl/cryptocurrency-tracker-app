@@ -18,6 +18,23 @@
     <string name="toast_process_successful_text">Process completed.</string>
     <string name="toast_process_failed_title">Unsuccessful</string>
     <string name="toast_process_failed_text">Process failed.</string>
+
+    <!-- Refresh Interval Dialog -->
+    <string name="dialog_refresh_interval_title">Refresh Interval</string>
+    <string name="dialog_refresh_interval_second_5">5 Second</string>
+    <string name="dialog_refresh_interval_second_30">30 Second</string>
+    <string name="dialog_refresh_interval_minute_1">1 Minute</string>
+    <string name="dialog_refresh_interval_minute_5">5 Minute</string>
+
+    <!-- Favorite Coin List Fragment -->
     <string name="favorite_coin_list_fragment_empty_list_message">You don\'t have any favorite coins</string>
+
+    <!-- Fragment Coin Detail -->
+    <string name="fragment_coin_detail_coin_price_title_text_size">Current Price</string>
+    <string name="fragment_coin_detail_percentage_title_text_size">Price Change Percentage - 24h</string>
+
+    <!-- View Pager -->
+    <string name="view_pager_coins_menu_title">Coins</string>
+    <string name="view_pager_favorites_menu_title">Favorites</string>
 
 </resources>

@@ -4,7 +4,7 @@ import com.umit.cryptocurrencytrackerapp.data.local.room.dataSource.CoinsLocalDa
 import com.umit.cryptocurrencytrackerapp.data.local.room.database.dao.CoinsDao
 import com.umit.cryptocurrencytrackerapp.data.remote.api.CoinsAPI
 import com.umit.cryptocurrencytrackerapp.data.remote.api.dataSource.CoinsRemoteDataSource
-import com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataStore.FavoriteCoinsRemoteDataSource
+import com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataSource.FavoriteCoinsRemoteDataSource
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

@@ -13,4 +13,5 @@
     <color name="mainGray">#808080</color>
     <color name="mainNavyBlue">#001539</color>
     <color name="transparentColor">#00000000</color>
+    <color name="secondaryNavyBlue">#000E26</color>
 </resources>

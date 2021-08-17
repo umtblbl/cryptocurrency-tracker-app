@@ -33,10 +33,10 @@
 
                 <ImageView
                     android:id="@+id/backImageView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_width="@dimen/toolbar_icon_size"
+                    android:layout_height="@dimen/toolbar_icon_size"
+                    android:layout_marginStart="@dimen/general_space_sm"
+                    android:layout_marginTop="@dimen/general_space_md"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
@@ -46,10 +46,10 @@
 
                 <ImageView
                     android:id="@+id/refreshIntervalImageView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_width="@dimen/toolbar_icon_size"
+                    android:layout_height="@dimen/toolbar_icon_size"
+                    android:layout_marginTop="@dimen/general_space_md"
+                    android:layout_marginEnd="@dimen/general_space_md"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
@@ -59,10 +59,10 @@
 
                 <ImageView
                     android:id="@+id/favoriteImageView"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_width="@dimen/toolbar_icon_size"
+                    android:layout_height="@dimen/toolbar_icon_size"
+                    android:layout_marginTop="@dimen/general_space_md"
+                    android:layout_marginEnd="@dimen/general_space_sm"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
@@ -74,12 +74,12 @@
                     android:id="@+id/nameTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="@dimen/general_space_md"
+                    android:layout_marginTop="@dimen/general_space_md"
                     android:gravity="center"
                     android:text="@{model.name}"
                     android:textColor="@color/white"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/general_size_md"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -87,9 +87,9 @@
 
                 <ImageView
                     android:id="@+id/coinImageView"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="@dimen/fragment_coin_detail_coin_image_size"
+                    android:layout_height="@dimen/fragment_coin_detail_coin_image_size"
+                    android:layout_marginTop="@dimen/general_space_sm"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/nameTextView"
@@ -100,11 +100,11 @@
                     android:id="@+id/coinPriceContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="@dimen/general_space_md"
+                    android:layout_marginTop="@dimen/general_space_md"
                     android:background="@drawable/item_bg"
                     android:orientation="vertical"
-                    android:padding="8dp"
+                    android:padding="@dimen/general_space_xs"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/coinImageView">
@@ -113,18 +113,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Current Price"
+                        android:text="@string/fragment_coin_detail_coin_price_title_text_size"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/general_size_sm" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/general_space_xs"
                         android:gravity="center"
                         android:text="@{model.currentPrice}"
                         android:textColor="@color/mainGold"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/general_size_sm"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -133,11 +133,11 @@
                     android:id="@+id/pricePercentageContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="@dimen/general_space_md"
+                    android:layout_marginTop="@dimen/general_space_md"
                     android:background="@drawable/item_bg"
                     android:orientation="vertical"
-                    android:padding="8dp"
+                    android:padding="@dimen/general_space_xs"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/coinPriceContainer">
@@ -146,9 +146,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Price Change Percentage - 24h"
+                        android:text="@string/fragment_coin_detail_percentage_title_text_size"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/general_size_sm" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                         android:gravity="center"
                         android:text="@{model.pricePercentage24h}"
                         android:textColor="@color/mainGold"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/general_size_sm"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -166,13 +166,13 @@
                     android:id="@+id/descriptionTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="@dimen/general_space_md"
+                    android:layout_marginTop="@dimen/general_space_md"
                     android:gravity="center"
-                    android:paddingBottom="24dp"
+                    android:paddingBottom="@dimen/general_space_md"
                     android:text="@{model.description}"
                     android:textColor="@color/white"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/fragment_coin_detail_description_text_size"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/pricePercentageContainer" />

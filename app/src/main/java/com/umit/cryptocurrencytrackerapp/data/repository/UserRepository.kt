@@ -1,6 +1,6 @@
 package com.umit.cryptocurrencytrackerapp.data.repository
 
-import com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataStore.FavoriteCoinsRemoteDataSource
+import com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataSource.FavoriteCoinsRemoteDataSource
 import com.umit.cryptocurrencytrackerapp.scenes.coinList.model.CoinItemModel
 import com.umit.cryptocurrencytrackerapp.shared.model.Optional
 import io.reactivex.rxjava3.core.Observable

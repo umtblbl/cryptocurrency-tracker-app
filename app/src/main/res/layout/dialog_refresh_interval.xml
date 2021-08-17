@@ -6,17 +6,17 @@
         android:layout_height="wrap_content"
         android:background="@drawable/item_bg"
         android:orientation="vertical"
-        android:paddingHorizontal="48dp"
-        android:paddingVertical="20dp">
+        android:paddingHorizontal="@dimen/dialog_refresh_interval_padding_horizontal"
+        android:paddingVertical="@dimen/dialog_refresh_interval_padding_vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autoSizeTextType="uniform"
             android:gravity="center"
-            android:text="Refresh Interval"
+            android:text="@string/dialog_refresh_interval_title"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/radio_button_text_size" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/mainGold"
-                android:text="5 Second"
+                android:text="@string/dialog_refresh_interval_second_5"
                 android:textColor="@color/white"
                 android:textSize="@dimen/radio_button_text_size" />
 
@@ -39,17 +39,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/mainGold"
-                android:text="30 Second"
+                android:text="@string/dialog_refresh_interval_second_30"
                 android:textColor="@color/white"
                 android:textSize="@dimen/radio_button_text_size" />
-
 
             <RadioButton
                 android:id="@+id/minute1Radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/mainGold"
-                android:text="1 Minute"
+                android:text="@string/dialog_refresh_interval_minute_1"
                 android:textColor="@color/white"
                 android:textSize="@dimen/radio_button_text_size" />
 
@@ -58,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/mainGold"
-                android:text="5 Minute"
+                android:text="@string/dialog_refresh_interval_minute_5"
                 android:textColor="@color/white"
                 android:textSize="@dimen/radio_button_text_size" />
 

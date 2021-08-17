@@ -15,14 +15,19 @@
     <dimen name="general_size_sm">16sp</dimen>
     <dimen name="general_size_md">24sp</dimen>
 
+    <!-- Toolbar -->
+    <dimen name="toolbar_icon_size">32dp</dimen>
+
     <!-- App Progress -->
     <dimen name="app_progress_size">180dp</dimen>
     <dimen name="toolbar_height">60dp</dimen>
 
-    <!-- Radio Group -->
+    <!-- Dialog Refresh Interval -->
     <dimen name="radio_button_text_size">16sp</dimen>
     <dimen name="radio_group_margin_vertical">20dp</dimen>
     <dimen name="radio_group_margin_horizontal">40dp</dimen>
+    <dimen name="dialog_refresh_interval_padding_vertical">20dp</dimen>
+    <dimen name="dialog_refresh_interval_padding_horizontal">48dp</dimen>
 
     <!-- LoginFragment & RegisterFragment -->
     <dimen name="auth_edit_text_width">240dp</dimen>
@@ -31,5 +36,17 @@
     <!-- Login Fragment -->
     <dimen name="login_fragment_lottie_view_size">260dp</dimen>
     <dimen name="login_fragment_title_text_size">28sp</dimen>
+
+    <!-- Coin Detail Fragment -->
+    <dimen name="fragment_coin_detail_coin_image_size">140dp</dimen>
+    <dimen name="fragment_coin_detail_description_text_size">14sp</dimen>
+
+    <!-- Coin List Fragment -->
+    <dimen name="fragment_coin_list_search_view_padding_top">4dp</dimen>
+
+    <!-- Item Coin -->
+    <dimen name="item_coin_margin_bottom">12dp</dimen>
+    <dimen name="item_coin_icon_size">40dp</dimen>
+    <dimen name="item_coin_symbol_text_size">14sp</dimen>
 
 </resources>

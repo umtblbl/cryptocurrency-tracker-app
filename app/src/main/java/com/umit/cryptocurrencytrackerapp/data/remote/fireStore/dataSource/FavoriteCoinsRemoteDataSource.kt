@@ -1,4 +1,4 @@
-package com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataStore
+package com.umit.cryptocurrencytrackerapp.data.remote.fireStore.dataSource
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.QuerySnapshot

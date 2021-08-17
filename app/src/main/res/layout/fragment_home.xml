@@ -22,14 +22,14 @@
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
-                android:text="Coins"
+                android:text="@string/view_pager_coins_menu_title"
                 app:tabIconTintMode="multiply"
                 android:icon="@drawable/dolar_icon"
                 android:layout_height="wrap_content"/>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
-                android:text="Favorites"
+                android:text="@string/view_pager_favorites_menu_title"
                 android:icon="@drawable/favorite_icon"
                 android:layout_height="wrap_content"/>
 
