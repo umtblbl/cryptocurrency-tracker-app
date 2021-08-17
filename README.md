@@ -1,7 +1,13 @@
+
 # CryptocurrencyTrackerApp
+
 A Simple Cryptocurrency Price Tracker App
 
-<br><br>
+<br>
+
+<img width="16%" align="center" src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Bitcoin-BTC-icon.png" />
+
+<br>
 
 # Architecture 🧪
 This application uses the MVVM [Model-View-ViewModel] architecture. This provides one-way data flow and increases testability.
