@@ -22,6 +22,7 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 # Libraries and Tools 🛠
 
+<li><a href="https://docs.gradle.org/current/userguide/kotlin_dsl.html">Kotlin DSL</a></li>
 <li><a href="https://github.com/pinterest/ktlint">Ktlint</a></li>
 <li><a href="https://developer.android.com/training/data-storage/room">Room</a></li>
 <li><a href="https://firebase.google.com/docs/firestore">FireStore</a></li>
