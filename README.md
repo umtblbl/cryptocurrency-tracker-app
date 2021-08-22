@@ -14,9 +14,9 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 <br>
 
-# Data Access Architecture :zap:
+# Architecture Scheme :zap:
 
-<img width="60%" align="center" src="https://imgur.com/x07BGrY.png" />
+<img width="60%" align="center" src="https://imgur.com/O5uXTSc.png" />
 
 <br>
 
