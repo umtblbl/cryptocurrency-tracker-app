@@ -35,6 +35,7 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 <li><a href="https://github.com/bumptech/glide">Glide</a></li>
 <li><a href="https://github.com/airbnb/lottie-android">Lottie</a></li>
 <li><a href="https://developer.android.com/topic/libraries/architecture/navigation/">Navigation</a></li>
+<li><a href="https://developer.android.com/guide/navigation/navigation-pass-data#Safe-args">Safe Args</a></li>
 <li><a href="https://developer.android.com/topic/libraries/data-binding">Data Binding</a></li>
 <li><a href="https://developer.android.com/topic/libraries/architecture/viewmodel">ViewModel</a></li>
 
