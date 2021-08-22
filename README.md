@@ -16,7 +16,7 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 # Architecture Scheme :zap:
 
-<img width="60%" align="center" src="https://imgur.com/O5uXTSc.png" />
+<img width="65%" align="center" src="https://imgur.com/O5uXTSc.png" />
 
 <br>
 
