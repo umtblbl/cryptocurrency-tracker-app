@@ -24,15 +24,15 @@ This application uses the MVVM [Model-View-ViewModel] architecture. This provide
 
 <li><a href="https://docs.gradle.org/current/userguide/kotlin_dsl.html">Kotlin DSL</a></li>
 <li><a href="https://github.com/pinterest/ktlint">Ktlint</a></li>
-<li><a href="https://developer.android.com/training/data-storage/room">Room</a></li>
-<li><a href="https://firebase.google.com/docs/firestore">FireStore</a></li>
-<li><a href="https://developer.android.com/training/dependency-injection/dagger-android">Dagger</a></li>
-<li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
-<li><a href="https://github.com/square/okhttp">OkHttp</a></li>
-<li><a href="https://github.com/bumptech/glide">Glide</a></li>
-<li><a href="https://github.com/google/gson">Gson</a></li>
 <li><a href="https://github.com/ReactiveX/RxKotlin">RxKotlin</a></li>
 <li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="https://developer.android.com/training/dependency-injection/dagger-android">Dagger</a></li>
+<li><a href="https://developer.android.com/training/data-storage/room">Room</a></li>
+<li><a href="https://firebase.google.com/docs/firestore">FireStore</a></li>
+<li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
+<li><a href="https://github.com/square/okhttp">OkHttp</a></li>
+<li><a href="https://github.com/google/gson">Gson</a></li>
+<li><a href="https://github.com/bumptech/glide">Glide</a></li>
 <li><a href="https://github.com/airbnb/lottie-android">Lottie</a></li>
 <li><a href="https://developer.android.com/topic/libraries/architecture/navigation/">Navigation</a></li>
 <li><a href="https://developer.android.com/topic/libraries/data-binding">Data Binding</a></li>
